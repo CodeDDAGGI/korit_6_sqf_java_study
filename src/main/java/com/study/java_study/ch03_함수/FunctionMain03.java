@@ -7,15 +7,14 @@ public class FunctionMain03 {
 
         fx.fx01(1234, "홍길동", 30, "00000000000");
 
-        // 객체의 묶음으로 데이터를 넘겨줘야 댐
-        Student st = new Student(); // Student 자료형 생성
-        // Student 정보 입력 - st객체에 데이터가 기입됨
-        st.name = "홍길동"; 
-        st.age = 25;
-        st.phone="01054878966";
-        st.studentCode=1235;
-
-        fx.fx02(st);
+        // 객체의 묶음으로 데이터를 넘겨줘야 댐 std:변수
+        Student std = new Student(); // new Student() 실제 데이터가 들어가는 곳
+        std.name = "홍길동";
+        std.age = 30;
+        std.studentCode = 1234;
+        std.phone= "01099456452";
+        
+        fx.fx02(std);
     }
 
 }

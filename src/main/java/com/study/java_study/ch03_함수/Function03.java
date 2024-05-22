@@ -11,7 +11,7 @@ public class Function03 {
         System.out.println();
     };
 
-    void fx02(Student student){
+    void fx02(Student student /*변수 및 자료형*/){
         System.out.println("fx02 함수 호출");
         System.out.println(student.studentCode);
         System.out.println(student.name);
