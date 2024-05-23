@@ -19,4 +19,9 @@ public class Function02 { // 틀, 도구
         return 재료 + "빙수 : " + count + "개";
     }
 
+    // 매개변수 x, 리턴 o
+    String get() {
+        return "데이터";
+    }
+
 }

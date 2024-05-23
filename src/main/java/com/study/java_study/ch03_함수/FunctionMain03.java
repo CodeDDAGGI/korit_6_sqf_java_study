@@ -13,7 +13,7 @@ public class FunctionMain03 {
         std.age = 30;
         std.studentCode = 1234;
         std.phone= "01099456452";
-        
+
         fx.fx02(std);
     }
 
