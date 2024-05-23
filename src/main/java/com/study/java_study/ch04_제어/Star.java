@@ -5,13 +5,13 @@ public class Star {
 
         /*
 
-        *
-        **
-        ***
-        ****
-        *****
+         *
+         **
+         ***
+         ****
+         *****
 
-        */
+         */
 
 
         for (int i = 0; i < 5; i++) {
@@ -22,8 +22,8 @@ public class Star {
         }
         System.out.println();
 
-        for (int i = 0; i < 5; i++){
-            for (int j = 0; j < 5 - i; j++){
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5 - i; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -31,40 +31,53 @@ public class Star {
 
         System.out.println();
 
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             int num = 0;
             for (int j = 0; j < 4 - i; j++) { // i = 0 4번 반복 i = 1 3번
                 System.out.print(" ");
-                }
-            while(num < i + 1){
-                    System.out.print("*");
-                    num++;
             }
-            System.out.println();
-        }
-        System.out.println();
-
-        for (int i = 0; i < 5; i++){
-            int num = 0;
-            for (int j = 0; j < 5 - i; i++ ){ // i = 0 4번 반복 i = 1 3번
+            for (int k = 0; k < i + 1 ; k++) {
                 System.out.print("*");
             }
-            while(num < i + 1){
-                System.out.print(" ");
+            System.out.println();
+        }
 
+            System.out.println();
+
+        for (int i = 0; i < 5; i++){
+
+            for (int j = 0; j < i; j++ ){ // i = 0 4번 반복 i = 1 3번
+                System.out.print(" ");
+            }
+            for (int k = 0; k < 5 - i; k++) {
+                System.out.print("*");
             }
             System.out.println();
         }
 
-        /*
-          *
-         ***
-        *****
-       *******
-      *********
+        System.out.println();
+
+        for(int i = 0; i < 5; i++){
+
+            for (int j = 0; j < 4 - i; j++){
+                System.out.print(" ");
+            }
+            for (int k = 0; k < 1 + 2 * i; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+            /*                  뛰칸   증가값
+                          *      4      1
+                         ***     3      3   1(홀수) + ? (짝수) = 홀수
+                        *****    2      5   1(홀수) + ? (짝수) = 홀수
+                       *******   1      7   1(홀수) + ? (짝수) = 홀수
+                      *********  0      9   1(홀수) + ? (짝수) = 홀수
 
 
-        */
+             */
+
 
     }
 }
