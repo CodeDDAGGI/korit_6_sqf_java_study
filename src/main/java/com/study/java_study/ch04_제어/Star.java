@@ -45,18 +45,20 @@ public class Star {
         System.out.println();
 
         for (int i = 0; i < 5; i++){
-            int num = 0;
             for (int j = 0; j < 5 - i; i++ ){ // i = 0 4번 반복 i = 1 3번
                 System.out.print("*");
             }
-            while(num < i + 1){
-                System.out.print(" ");
 
-            }
             System.out.println();
         }
 
         /*
+        *****
+         ****
+          ***
+           **
+            *
+
           *
          ***
         *****
