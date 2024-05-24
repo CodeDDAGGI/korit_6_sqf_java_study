@@ -32,6 +32,10 @@ public class 입력02 {
         System.out.print("연락처 : ");
         phone = scanner.nextLine();
 
+        System.out.println();
+
+        // 바로 아랫줄끼리 묶임
+        // ctrl 2번 밑으로
         System.out.println("이름 : " + name);
         System.out.println("나이 : " + age);
         System.out.println("주소 : " + address);
