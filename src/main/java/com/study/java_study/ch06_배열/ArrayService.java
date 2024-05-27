@@ -64,27 +64,22 @@ public class ArrayService {
                             break;
                         }
                     }
-<<<<<<< HEAD
-                    if(!isModifi) {
-                        System.out.println("해당 이름이 존재하지 않습니다");
-                    }
-=======
                         if(!isModifi) {
                         System.out.println("해당 이름이 존재하지 않습니다");
                         }
->>>>>>> 5f5c5469001a4c866d256a17666c35f53f6048d0
+                        if(!isModifi) {
+                        System.out.println("해당 이름이 존재하지 않습니다");
+                        }
                     break;
                 case "3":
                     System.out.println("[3. 삭제]");
                     System.out.print("이름 입력: ");
                     String deleteName = scanner.nextLine();
-<<<<<<< HEAD
                     int findedIndex = -1;
                     for (int i = 0; i < names.length; i++){
                         if( names[i].equals(deleteName)){
                             findedIndex = i;
                             break;
-=======
                     String[] newlocalnames = new String[names.length -1];
                     int newIndex = 0;
                     boolean found = false;
@@ -92,11 +87,9 @@ public class ArrayService {
                         if(names[i].equals(deleteName)){
                             found = true;
                             continue;
->>>>>>> 5f5c5469001a4c866d256a17666c35f53f6048d0
-                        }
+                            }
                             newlocalnames[newIndex++] = names[i];
-                    }
-<<<<<<< HEAD
+                            }
                     if(findedIndex == -1){
                         System.out.println("해당 이름은 존재하지 않습니다.");
                         break;
@@ -111,9 +104,8 @@ public class ArrayService {
                     }
                     names = newNames;
                     System.out.println(deleteName + "을(를) 삭제하였습니다.");
-=======
-                            names = newlocalnames;
->>>>>>> 5f5c5469001a4c866d256a17666c35f53f6048d0
+
+                    names = newlocalnames;
                     break;
 //                    String[] newlocalnames = new String[names.length -1];
 //                    int findedIndex = -1;
