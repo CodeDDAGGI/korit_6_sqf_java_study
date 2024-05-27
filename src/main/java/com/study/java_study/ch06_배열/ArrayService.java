@@ -26,8 +26,11 @@ public class ArrayService {
                     String[] newNames = new String[names.length + 1];
                     for (int i = 0; i < names.length; i++) {
                         newNames[i] = names[i];
+
                     }
                     names = newNames;
+
+
                     System.out.print("등록할 이름 : ");
                     names[names.length - 1] = scanner.nextLine();
                     System.out.println("등록 완료!");
@@ -38,25 +41,35 @@ public class ArrayService {
                     String fiName = scanner.nextLine();
                     System.out.println("수정할 이름 입력 : ");
                     String modifyName = scanner.nextLine();
+                    boolean isModifi = false;
                     for (int i = 0; i < names.length; i++) {
                         if (names[i].equals(fiName)) {
                             names[i] = modifyName;
+                            isModifi = true;
                             System.out.println("수정완료");
                             System.out.println(names[i]);
+                            break;
                         }
                     }
+                        if(!isModifi) {
+                        System.out.println("해당 이름이 존재하지 않습니다");
+                        }
                     break;
                 case "3":
                     System.out.println("[3. 삭제]");
                     System.out.println("이름 입력: ");
                     String deleteName = scanner.nextLine();
-                    for (int i = 0; i < names.length; i++){
+                    String[] newlocalnames = new String[names.length -1];
+                    int newIndex = 0;
+                    boolean found = false;
+                    for (int i = 0; i < names.length; i++){//3
                         if(names[i].equals(deleteName)){
-                            names[i] ="";
-                                    
-                            System.out.println(names[i]);
+                            found = true;
+                            continue;
                         }
+                            newlocalnames[newIndex++] = names[i];
                     }
+                            names = newlocalnames;
                     break;
                 case "4":
                     System.out.println("[4. 이름 찾기]");
