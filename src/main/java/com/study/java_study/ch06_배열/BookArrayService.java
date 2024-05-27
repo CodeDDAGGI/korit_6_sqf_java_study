@@ -22,8 +22,13 @@ public class BookArrayService {
             String menuSeleter = scanner.nextLine();
             String[] newbook = new String[books.length + 1];
 <<<<<<< HEAD
+<<<<<<< HEAD
             int findIndex = -1;
 
+=======
+
+            int findIndex = -1;
+>>>>>>> c7e60eb88feab9cad3ca62e47d12c102abeb7d5e
 =======
 
             int findIndex = -1;
