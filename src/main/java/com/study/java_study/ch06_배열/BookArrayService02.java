@@ -7,6 +7,7 @@ public class BookArrayService02 {
 
         Scanner scanner = new Scanner(System.in);
         String[] books = new String[0];
+<<<<<<< HEAD
         boolean isRun = true;
         BookArrayUtils bookArrayUtils = new BookArrayUtils();
 
@@ -95,5 +96,10 @@ public class BookArrayService02 {
 
             }
         }
+=======
+        boolean Run = true;
+        BookArrayUtils Arraybooks = new BookArrayUtils();
+
+>>>>>>> c7e60eb88feab9cad3ca62e47d12c102abeb7d5e
     }
 }
