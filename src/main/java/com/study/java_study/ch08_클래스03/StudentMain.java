@@ -1,4 +1,4 @@
-package com.study.java_study.ch08.클래스03;
+package com.study.java_study.ch08_클래스03;
 
 public class StudentMain {
 
@@ -22,7 +22,7 @@ public class StudentMain {
         students[0] = new Student(20240501 , "김준일" , 31);
         students[1] = new Student(20240502 , "김준이" , 32);
         students[2] = new Student(20240503 , "김준삼" , 33);
-//        students[3]= new Student(2024055 , "김준삼" , 34);
+        students[3]= new Student(2024055 , "김준삼" , 34);
 
         students[14] = new Student(2215 , "김준일"  , 45);
 
