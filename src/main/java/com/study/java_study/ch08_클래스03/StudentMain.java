@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.study.java_study.ch08.클래스03;
+=======
+package com.study.java_study.ch08_클래스03;
+>>>>>>> cccd9dc9b6514c0ef256214101b28907e4b04731
 
 public class StudentMain {
 
@@ -22,7 +26,11 @@ public class StudentMain {
         students[0] = new Student(20240501 , "김준일" , 31);
         students[1] = new Student(20240502 , "김준이" , 32);
         students[2] = new Student(20240503 , "김준삼" , 33);
+<<<<<<< HEAD
 //        students[3]= new Student(2024055 , "김준삼" , 34);
+=======
+        students[3]= new Student(2024055 , "김준삼" , 34);
+>>>>>>> cccd9dc9b6514c0ef256214101b28907e4b04731
 
         students[14] = new Student(2215 , "김준일"  , 45);
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.study.java_study.ch08.클래스03;
+=======
+package com.study.java_study.ch08_클래스03;
+>>>>>>> cccd9dc9b6514c0ef256214101b28907e4b04731
 
 public class ColorMain {
     public static void main(String[] args) {

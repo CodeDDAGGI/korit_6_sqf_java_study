@@ -7,12 +7,10 @@ public class BookArrayService02 {
 
         Scanner scanner = new Scanner(System.in);
         String[] books = new String[0];
-<<<<<<< HEAD
-<<<<<<< HEAD
         boolean isRun = true;
         BookArrayUtils bookArrayUtils = new BookArrayUtils();
 
-        while (isRun){
+        while (isRun) {
             System.out.println("[도서 관리 프로그램]");
             System.out.println("1. 등록");
             System.out.println("2. 수정");
@@ -25,10 +23,10 @@ public class BookArrayService02 {
             int findIndex = -1;
             String[] newBooks = new String[books.length + 1];
 
-            switch (menuSeleter){
-                case "1" :
+            switch (menuSeleter) {
+                case "1":
                     System.out.println("등록");
-                    for(int i = 0; i < books.length; i ++){
+                    for (int i = 0; i < books.length; i++) {
                         newBooks[i] = books[i];
                     }
                     books = newBooks;
@@ -36,12 +34,12 @@ public class BookArrayService02 {
                     books[books.length - 1] = scanner.nextLine();
                     break;
 
-                case "2" :
+                case "2":
                     System.out.println("수정");
                     System.out.print("수정할 이름 : ");
                     String modifybook = scanner.nextLine();
-                    findIndex = bookArrayUtils.bookFindByBooks(books,modifybook);
-                    if (findIndex == -1){
+                    findIndex = bookArrayUtils.bookFindByBooks(books, modifybook);
+                    if (findIndex == -1) {
                         System.out.println("책을 찾지 못했습니다");
                         break;
                     }
@@ -49,18 +47,18 @@ public class BookArrayService02 {
                     books[findIndex] = scanner.nextLine();
                     System.out.println("완료");
                     break;
-                case "3" :
+                case "3":
                     System.out.println("삭제");
                     System.out.println("삭제할 이름 : ");
                     String deleteBook = scanner.nextLine();
                     findIndex = bookArrayUtils.bookFindByBooks(books, deleteBook);
-                    if( findIndex == -1){
+                    if (findIndex == -1) {
                         System.out.println("책을 찾지 못했습니다");
                         break;
                     }
                     newBooks = new String[books.length - 1];
-                    for (int i = 0; i < newBooks.length; i++){
-                        if ( i < findIndex){
+                    for (int i = 0; i < newBooks.length; i++) {
+                        if (i < findIndex) {
                             newBooks[i] = books[i];
                             continue;
                         }
@@ -70,25 +68,25 @@ public class BookArrayService02 {
                     System.out.println("삭제 완료");
                     break;
 
-                case "4" :
+                case "4":
                     System.out.println("찾기");
                     System.out.println("책 이름 : ");
                     String findbook = scanner.nextLine();
                     findIndex = bookArrayUtils.bookFindByBooks(books, findbook);
-                    for (int i = 0; i < books.length; i++){
-                        if(findIndex == -1){
+                    for (int i = 0; i < books.length; i++) {
+                        if (findIndex == -1) {
                             System.out.println("책을 찾지 못헀습니다");
                             break;
                         }
                     }
-                    System.out.println("책 번호 " + (findIndex+1) + "책 이름 : " + books[findIndex] );
+                    System.out.println("책 번호 " + (findIndex + 1) + "책 이름 : " + books[findIndex]);
                     break;
-                case "5" :
-                    for (int i = 0; i < books.length; i++){
-                        System.out.println("책" + ( i + 1 ) + " 책 이름 : " + books[i]);
+                case "5":
+                    for (int i = 0; i < books.length; i++) {
+                        System.out.println("책" + (i + 1) + " 책 이름 : " + books[i]);
                     }
                     break;
-                case "q" :
+                case "q":
                     System.out.println("프로그램 종료");
                     isRun = false;
                     break;
@@ -97,15 +95,5 @@ public class BookArrayService02 {
 
             }
         }
-=======
-        boolean Run = true;
-        BookArrayUtils Arraybooks = new BookArrayUtils();
-
->>>>>>> c7e60eb88feab9cad3ca62e47d12c102abeb7d5e
-=======
-        boolean Run = true;
-        BookArrayUtils Arraybooks = new BookArrayUtils();
-
->>>>>>> c7e60eb88feab9cad3ca62e47d12c102abeb7d5e
     }
 }

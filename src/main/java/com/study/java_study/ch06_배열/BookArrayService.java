@@ -9,7 +9,6 @@ public class BookArrayService {
         boolean isRun = true;
         BookArrayUtils ArraybooksUtils = new BookArrayUtils();
 
-
         while (isRun){
             System.out.println("[도서 관리 프로그램]");
             System.out.println("1. 등록");
@@ -21,18 +20,8 @@ public class BookArrayService {
             System.out.print("메뉴 선택 : ");
             String menuSeleter = scanner.nextLine();
             String[] newbook = new String[books.length + 1];
-<<<<<<< HEAD
-<<<<<<< HEAD
             int findIndex = -1;
 
-=======
-
-            int findIndex = -1;
->>>>>>> c7e60eb88feab9cad3ca62e47d12c102abeb7d5e
-=======
-
-            int findIndex = -1;
->>>>>>> c7e60eb88feab9cad3ca62e47d12c102abeb7d5e
             switch (menuSeleter) {
                 case "1":
                     System.out.println("[ 책 등록 ]");
