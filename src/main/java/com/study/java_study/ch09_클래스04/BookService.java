@@ -35,6 +35,7 @@ public class BookService { // 서비스 , 기능 담는 용도
         System.out.println("2. 도서 검색");
         System.out.println("3. 도서 수정");
         System.out.println("4. 도서 삭제");
+        System.out.println("5. 전체 조회");
         System.out.println("q. 프로그램 종료");
 
         String selectedMenu = selectMenu();
@@ -50,12 +51,14 @@ public class BookService { // 서비스 , 기능 담는 용도
                 search();
                 break;
             case "3":
-
+                modify();
                 break;
             case "4":
-
+                remove();
                 break;
-
+            case "5":
+                allfind();
+                break;
             default:
                 System.out.println("입력 오류");
         }
@@ -70,8 +73,8 @@ public class BookService { // 서비스 , 기능 담는 용도
         while (true) {
             System.out.print(title + " 입력 : ");
             value = scanner.nextLine();
-            if (!value.isBlank()) { // 중복 체크
-                // isBlank : 공백을 체크 안함
+            if (!value.isBlank()) { // 중복 체크 - 공백이 아니면 break
+                // isBlank : 공백을 체크
                 // isEmpty : 띄워쓰기를 공백으로 체크
                 break;
             }
@@ -133,6 +136,74 @@ public class BookService { // 서비스 , 기능 담는 용도
             System.out.println(book.toString());
         }
     }
+
+    private void remove(){
+        System.out.println("[ 도서 삭제 ]");
+        search();
+        System.out.println("삭제 할 도서번호 입력");
+        int removeBookId = scanner.nextInt();
+        scanner.nextLine();
+        BookEntity book = bookRepository.findBookByBookId(removeBookId); // 도서 객체를 조회
+        if(book == null){
+            System.out.println("해당 도서번호는 존재하지 않습니다. ");
+            return;
+        }
+        bookRepository.deleteBookByBookId(removeBookId);
+    }
+    private void allfind() {
+        System.out.println("[ 전체 조회 ]");
+        BookEntity[] allBooks = bookRepository.allBooks();
+//        for(int i = 0 ; i< )
+    }
+
+    private void modify() {
+        System.out.println("[ 도서 수정 ]");
+        search();
+        System.out.println("수정 할 도서번호 입력 : ");
+        int modifyBookId = scanner.nextInt();
+        scanner.nextLine();
+        BookEntity book = bookRepository.findBookByBookId(modifyBookId);
+        if(book == null){
+            System.out.println("해당 도서번호는 존재하지 않습니다. ");
+            return;
+        }
+
+        System.out.println(" << 도서 수정 정보 입력 >> ");
+        for(int i = 0; i < 3; i++){
+            String selected = null;
+            switch (i) {
+                case 0 :
+                    System.out.print("도서명을 수정하시겠습니까?");
+                    selected = scanner.nextLine();
+                    if(selected.equalsIgnoreCase("y")) { // 대소문자 구분없이 같은걸 찾아줌
+                        String bookName = duplicateBookName();
+                        book.setBookNames(bookName);
+                        break;
+                    }
+                    break;
+                case 1 :
+                    System.out.print("저자명을 수정하시겠습니까?");
+                    selected = scanner.nextLine();
+                    if(selected.equalsIgnoreCase("y")) { // 대소문자 구분없이 같은걸 찾아줌
+                        String author = validateValue("저자");
+                        book.setAuthor(author);
+                        break;
+                    }
+                    break;
+                case 2 :
+                    System.out.print("출판사명을 수정하시겠습니까?");
+                    selected = scanner.nextLine();
+                    if(selected.equalsIgnoreCase("y")) { // 대소문자 구분없이 같은걸 찾아줌
+                        String publisher = validateValue("출판사");
+                        book.setPublisher(publisher);
+                        break;
+                    }
+            }
+        }
+
+    }
 }
+
+
 
 

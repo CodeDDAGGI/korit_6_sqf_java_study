@@ -32,17 +32,6 @@ public class CarInfo {
         cars[lastIndex()] = car; // cars의 마지막 인덱스에 car의 값들을 전달
     }
 
-    public CarEntity findByCar (int carNumber, String carName){
-        CarEntity findCar = null;
-        for (CarEntity car: cars){
-            if(car.getCarName().equals(carName) || car.getCarNumber() == carNumber){
-                findCar = car;
-                break;
-            }
-
-        }
-        return findCar;
-    }
     private int newArraySize (int number, String text) {
         int newArraySize = 0;
 

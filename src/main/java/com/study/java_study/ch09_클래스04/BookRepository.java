@@ -111,6 +111,9 @@ public class BookRepository {
         return newArraySize;
     }
 
+    public BookEntity[] allBooks () {
+        return books;
+    }
     // 연관 검색 (보여지는 부분) - 다건조회
     public BookEntity[] searchBooks(int option, String searchText) {
         int newArraySize = getNewArraySize(option, searchText);
@@ -155,6 +158,35 @@ public class BookRepository {
         }
         return searchBooks;
     }
+
+        private int indexOfBookId(int bookId) {
+            int findIndex = -1;
+
+            for (int i = 0; i < books.length; i++) {
+                if (books[i].getBookId() == bookId) {
+                    findIndex = i;
+                    break;
+                }
+            }
+            return findIndex;
+        }
+
+    public void deleteBookByBookId(int bookId) {
+          int findIndex = indexOfBookId(bookId);
+          BookEntity[] newBooks = new BookEntity[books.length - 1];
+
+
+          for (int i = 0; i < newBooks.length; i++) {
+               if (i < findIndex) {
+                   newBooks[i] = books[i];
+                   continue;
+               }
+               newBooks[i] = books[i + 1];
+          }
+          books = newBooks;
+    }
+
+
 //        for( BookEntity book : books){
 //            // 글자 포함일때 사용 - contains
 //            // 글자가 정확해야할때 사용 - equals
