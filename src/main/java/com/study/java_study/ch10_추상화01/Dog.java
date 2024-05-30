@@ -1,4 +1,4 @@
-package com.study.java_study.ch10.추상화01;
+package com.study.java_study.ch10_추상화01;
 
 public class Dog extends Animal { // 상속
     private String breed;

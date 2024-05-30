@@ -1,4 +1,4 @@
-package com.study.java_study.ch10.추상화01;
+package com.study.java_study.ch10_추상화01;
 
 public class Animal { // Dog + Tiger의 공통부분
     // 메모리 자료형의 확장 ( 기존의 자료형에 추가를 하여 새로운 자료형을 만듬 )

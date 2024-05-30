@@ -1,0 +1,38 @@
+package com.study.java_study.ch14_Object;
+
+import java.util.Objects;
+
+/*
+    Object 클래스( 최상위 클래스 )
+
+ */
+public class ObjectMain {
+    public static void main(String[] args) {
+        // equals 패키지가 다르면 서로 다르다
+        // hashCode 값만 비교할때
+        Object object = new Object(); // 모든 클래스의 최상위 Object가 있음
+        Student student = new Student("김준일" , 31);
+        Student student2 = new Student("김준일" , 31);
+
+        Object[] objects = new Object[3];
+        objects[0] = new Object();
+        objects[1] = "test";
+        objects[2] = new Student("김준일", 31); // 어떤 자료형이든 최상위 객체(Object)라서 업캐스팅 가능하다
+
+        System.out.println(student);
+        String str = new String("데이터"); // toString에 toString을 함
+        System.out.println(str.toString());
+
+        String studentData = student.toString();
+
+        System.out.println(student.equals(student2));
+
+        // 주소값이 다르게나옴
+        System.out.println(student.hashCode());
+        System.out.println(student2.hashCode());
+
+        System.out.println(student.hashCode()== student2.hashCode());
+        System.out.println(Objects.hash("김준일"));
+        System.out.println(Objects.hash("김준일"));
+     }
+}

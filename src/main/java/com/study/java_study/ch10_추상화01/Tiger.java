@@ -1,4 +1,4 @@
-package com.study.java_study.ch10.추상화01;
+package com.study.java_study.ch10_추상화01;
 
 public class Tiger extends Animal { // 내부적으로 Animal을 갖고있음
     private int power;

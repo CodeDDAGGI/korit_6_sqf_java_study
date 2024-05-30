@@ -1,4 +1,4 @@
-package com.study.java_study.ch10.추상화01;
+package com.study.java_study.ch10_추상화01;
 
 public class animalMain {
     public static void main(String[] args) {
