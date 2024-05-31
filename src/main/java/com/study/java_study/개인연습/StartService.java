@@ -12,7 +12,7 @@ public class StartService {
         scanner = new Scanner(System.in);
     }
 
-    public boolean Run() {
+    public  boolean Run() {
         boolean isRun = true;
         boolean start = false;
 
@@ -29,7 +29,7 @@ public class StartService {
 
                     break;
                 case "2":
-
+                    registerChar ();
                     break;
                 case "3":
 
@@ -70,15 +70,16 @@ public class StartService {
         startRepository.save(newChar);
     }
 
-//    private  void registerChar () {
-//
-//        System.out.println(" [ 캐릭터 생성 ] ");
-//        System.out.println();
+    private  void registerChar () {
+
+        System.out.println(" [ 캐릭터 생성 ] ");
+        System.out.println();
+        createChar();
 //        StateEntity[] character = new StateEntity( charId,
 //        yourName,gender ,  health , power, armor);
-//
-////        startRepository.saveChar(character);
-//    }
+
+//        startRepository.saveChar(character);
+    }
 
 
     }
