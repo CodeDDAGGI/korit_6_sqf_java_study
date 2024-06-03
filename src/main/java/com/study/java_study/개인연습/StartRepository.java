@@ -10,22 +10,19 @@ public class StartRepository {
     private StateEntity[] chars;
     public StartRepository() { chars = new StateEntity[0]; }
 
-    public void saveChar ( StateEntity character){
+    public void saveChar (){
         StateEntity[] newChar = new StateEntity[chars.length + 1];
 
         for(int i =0; i< chars.length; i++){
             newChar[i] = chars[i];
         }
-
-        chars[chars.length -1] = character;
         chars = newChar;
     }
 
     //save
-    public String save(StateEntity newChar){
-
-
-        return "";
+    public void save(StateEntity newChar){
+        saveChar();
+        chars[chars.length - 1] = newChar;
     }
 
     public void charsState () {

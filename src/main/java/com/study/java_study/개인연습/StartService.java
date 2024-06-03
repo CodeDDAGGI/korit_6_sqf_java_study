@@ -74,6 +74,7 @@ public class StartService {
 
         System.out.println(" [ 캐릭터 생성 ] ");
         System.out.println();
+        String create = null;
         createChar();
 //        StateEntity[] character = new StateEntity( charId,
 //        yourName,gender ,  health , power, armor);
