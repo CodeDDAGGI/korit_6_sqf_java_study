@@ -34,6 +34,8 @@ public class LambdaInterface0610 {
         // 매개변수는 변수이기떄문에 아무거나 원하는걸로 정의 가능
         // 중괄호 생략시 리턴도 생략(한 줄일 경우)
         // 매개변수가 하나일 경우 매개변수을 감싸는 소괄호 생략 가능
+
+        // 재네릭
         Function <String, Integer>fx = s -> Integer.parseInt(s);
 
         Integer num = fx.apply("10");
